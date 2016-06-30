@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TODO Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default"></div>
+			<div class="panel-heading">TODO APP</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<textarea name="texto" id="tarea" rows="10"></textarea>
+		</div>
+	</div>
+	<button type="button" onclick="caller('tarea')">Agregar</button>
+	<button type="button" onclick="obtener()">texto</button>
+	<div id="nuevo"></div>
+	<p id="txt"></p>
+</div>
+<body>
+	<script src="js/main.js"></script>
+</body>
+</html>

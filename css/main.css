@@ -1,0 +1,12 @@
+.panel-heading{
+	width: 20%;
+	height: 60px;
+	background-color: #CFC8C8;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+#textarea{
+	width: 80%;
+	height: 60px;
+}
