@@ -1,26 +1,45 @@
-function agregar(contenedor, texto, clase){
-			var nuevo = document.createElement("p");
-			var texto = document.createTextNode(texto);
-			nuevo.setAttribute("class", clase);
-			nuevo.appendChild(texto);		
-			contenedor.appendChild(nuevo);
+var agregarTarea = function(){
+		var lista = document.getElementById("lista"),
+		tarea = document.getElementById("tareaA"),
+		nuevaTarea = document.getElementById("boton");
+
+		var tarea = tareaA.value;
+		var	nuevaTarea = document.createElement("div");
+		var	contenido = document.createTextNode(tarea);
+		var	icono = document.createElement("span");
+
+			icono.setAttribute("id","icon"),
+			icono.setAttribute("class","glyphicon glyphicon-trash");
+			icono.addEventListener("click", eliminarRegistro);
+			//icono.onclick(eliminarRegistro);
+ 
+		if (tarea === "") {
+		alert("Ingresar una tarea");
+		}
+		else{
+ 
+		nuevaTarea.appendChild(contenido);
+		nuevaTarea.appendChild(icono);
+		lista.appendChild(nuevaTarea);
+		tareaA.value = "";
+
+		for (var i = 0; i <= lista.children.length -1; i++) {
+				lista.children[i].addEventListener("click", function(){
+					this.parentNode.removeChild(this);
+				});
+			}
+			
+        }
+}		
+ 	
+function eliminarTodo(){
+		lista.innerHTML = "";
 }
 
-function caller(clase){
-			var nuevo = document.getElementById("nuevo");
-			var texto = nuevo.children.length + 1
-			agregar(nuevo, texto, clase);
-}
-function obtener(){
-	var obt = document.getElementById('texto').value;
-	var obt2 = document.getElementById('txt');
-	obt2.innerHTML=obt;
-}
+	var eliminarRegistro = function(){
+		this.parentNode.removeChild(this);
+	};
 
-document.getElementById('boton').addEventListener(""){
-	function obtener(){
-	var obt = document.getElementById('texto').value;
-	var obt2 = document.getElementById('txt');
-	obt2.innerHTML=obt;
-}
-}
+	for (var i = 0; i <= lista.children.length -1; i++) {
+		lista.children[i].addEventListener("click", eliminarRegistro);
+	}
