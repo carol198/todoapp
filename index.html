@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <title>TODO Application</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default"></div>
-			<div class="panel-heading">TODO APP</div>
+		<div class="col-md-10 alert alert-success text-center role="alert"">
+			<h1>TODO APP</h1>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			<textarea name="texto" id="tarea" rows="10"></textarea>
+		<div class="col-md-10 text-center">
+			<textarea name="texto" id="tareaA" class="form-control" rows="3"></textarea>
+			<button class="btn btn-success" type="button" id="boton" onclick="agregarTarea()">Agregar</button>
+			
+			<button class="btn btn-warning"  type="button" id="botonE" onclick="eliminarTodo()">Eliminar Todo</button>
+			
 		</div>
 	</div>
-	<button type="button" onclick="caller('tarea')">Agregar</button>
-	<button type="button" onclick="obtener()">texto</button>
-	<div id="nuevo"></div>
-	<p id="txt"></p>
+	<div class="col-md-10 panel panel-success text-center" id="lista">
+		<list class="list-group bg-success" id="tarea">
+			
+		</list>
+
+	</div>
 </div>
 <body>
 	<script src="js/main.js"></script>
