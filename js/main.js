@@ -39,7 +39,3 @@ function eliminarTodo(){
 	var eliminarRegistro = function(){
 		this.parentNode.removeChild(this);
 	};
-
-	for (var i = 0; i <= lista.children.length -1; i++) {
-		lista.children[i].addEventListener("click", eliminarRegistro);
-	}
